@@ -12,7 +12,7 @@ public class PinCodeValidation {
 		System.out.println("Enter your Pin Code :");
 		String pinCode = sc.next();
 		
-		Pattern pattern = Pattern.compile("^\\S{6}$");
+		Pattern pattern = Pattern.compile("^([1-9])(\\S){5}$");
 		Matcher matcher = pattern.matcher(pinCode);
 		Boolean bool = matcher.find();
 		if (bool)
